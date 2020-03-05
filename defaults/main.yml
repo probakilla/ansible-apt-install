@@ -1,0 +1,4 @@
+---
+
+# Installation location of vundle
+vundle_location: ~/.vim/bundle/Vundle.vim

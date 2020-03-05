@@ -2,6 +2,15 @@
 
 Use to install basic programs
 
+## Variables
+
+Variables in the defaults/main.yml file
+
+```
+# Location where to install vundle
+vundle_location: ~/.vim/bundle/Vundle.vim
+```
+
 ## Howto use this role
 
 This role needs to be included in a playbook
