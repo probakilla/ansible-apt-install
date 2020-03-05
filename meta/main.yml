@@ -1,0 +1,24 @@
+galaxy_info:
+  author: Probakilla
+  role_name: apt_install
+  description: Install some basic programs
+
+  license: GPLv3
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+    - probakila
+    - debian
+    - shell
+    - zsh
+    - git
+    - install
+    - apt
+
+dependencies: []

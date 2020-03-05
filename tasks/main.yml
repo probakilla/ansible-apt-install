@@ -1,0 +1,9 @@
+---
+
+- name: "Install default useful programs"
+  become: true
+  apt:
+    pkg:
+      - vim-nox
+      - zsh
+      - git
