@@ -9,6 +9,8 @@ Variables in the defaults/main.yml file
 ```
 # Location where to install vundle
 vundle_location: ~/.vim/bundle/Vundle.vim
+# Location where oh my zsh plugins are installed
+ohmyzsh_plugins_path: ~/.oh-my-zsh/plugins
 ```
 
 ## Howto use this role

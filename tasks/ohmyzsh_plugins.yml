@@ -3,9 +3,10 @@
 - name: "Installing zsh-syntax-highlighting"
   git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    dest: {{ ohmyzsh_plugins_path }}/zsh-syntax-highlighting
+    dest: "{{ ohmyzsh_plugins_path }}/zsh-syntax-highlighting"
 
 - name: "Installing zsh-autosuggestions"
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
-    dest: {{ ohmyzsh_plugins_path }}/zsh-autosuggestions
+    dest: "{{ ohmyzsh_plugins_path }}/zsh-autosuggestions"
+

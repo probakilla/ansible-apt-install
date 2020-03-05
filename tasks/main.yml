@@ -15,6 +15,6 @@
 - name: "Installation of Vundle"
   git:
     repo: "https://github.com/VundleVim/Vundle.vim.git"
-    dest: {{ vundle_location }}
+    dest: "{{ vundle_location }}"
 
 - include: ohmyzsh_plugins.yml
