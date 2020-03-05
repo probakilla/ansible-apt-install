@@ -2,3 +2,6 @@
 
 # Installation location of vundle
 vundle_location: ~/.vim/bundle/Vundle.vim
+
+# Oh My Zsh plugins location
+ohmyzsh_plugins_path: $HOME/.oh-my-zsh/plugins

@@ -12,6 +12,9 @@
   shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ignore_errors: true
 
-- name: "Installtion of Vundle"
-  shell: git clone https://github.com/VundleVim/Vundle.vim.git {{ vundle_location }}
-  ignore_errors: true
+- name: "Installation of Vundle"
+  git:
+    repo: "https://github.com/VundleVim/Vundle.vim.git"
+    dest: {{ vundle_location }}
+
+- include: ohmyzsh_plugins.yml
