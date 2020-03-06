@@ -9,4 +9,3 @@
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: "{{ ohmyzsh_plugins_path }}/zsh-autosuggestions"
-
