@@ -10,10 +10,15 @@
       - build-essential
       - cmake
       - python3-dev
+      
+- name: "Ohmyzsh folder"
+  stat:
+    path: "{{ ohmyzsh_path }}"
+  register: ohmyzsh_path
 
 - name: "Install Ohmyzsh"
   shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ignore_errors: true
+  when: not ohmyzsh_path.stat.exists
 
 - name: "Installation of Vundle"
   git:
