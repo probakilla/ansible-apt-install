@@ -1,20 +1,25 @@
 ---
-
-- name: "Check if oh my zsh is installed"
+  
+- name: "Check syntax highlighting plugin"
   stat:
-    path: "{{ ohmyzsh_path }}"
-  register: ohmyzsh_folder
+    path: "{{ ohmyzsh_plugins_path }}/zsh-syntax-highlighting"
+  register: syntax_plugin
+  
+- name: "Check autosuggestion plugin"
+  stat:
+    path: "{{ ohmyzsh_plugins_path }}/zsh-autosuggestions"
+  register: suggestion_plugin
 
 - name: "Installing zsh-syntax-highlighting"
   git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest: "{{ ohmyzsh_plugins_path }}/zsh-syntax-highlighting"
     version: "HEAD"
-  when: not ohmyzsh_folder.stat.exists
+  when: not syntax_plugin.stat.exists
 
 - name: "Installing zsh-autosuggestions"
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: "{{ ohmyzsh_plugins_path }}/zsh-autosuggestions"
     version: "HEAD"
-  when: not ohmyzsh_folder.stat.exists
+  when: not suggestion_plugin.stat.exists
