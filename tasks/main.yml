@@ -2,15 +2,9 @@
 
 - name: "Install default useful programs"
   become: true
-  apt:
-    pkg:
-      - vim-nox
-      - zsh
-      - git
-      - build-essential
-      - cmake
-      - python3-dev
-      
+    name: "{{ item }}"
+  loop: "{{ program_list }}"
+
 - name: "Ohmyzsh folder"
   stat:
     path: "{{ ohmyzsh_path }}"
