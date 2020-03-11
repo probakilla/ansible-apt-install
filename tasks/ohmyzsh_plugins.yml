@@ -2,7 +2,7 @@
 
 - name: "Check if oh my zsh is installed"
   stat:
-    path: "{{ ohmyzsh_plugin_path }}"
+    path: "{{ ohmyzsh_path }}"
   register: ohmyzsh_folder
 
 - name: "Installing zsh-syntax-highlighting"
