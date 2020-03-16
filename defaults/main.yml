@@ -9,7 +9,7 @@ ohmyzsh_path: $HOME/.oh-my-zsh
 
 # Program list
 program_list:
-  - vim-nox
+  - neovim
   - zsh
   - git
   - build-essential
